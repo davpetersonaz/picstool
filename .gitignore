@@ -1,0 +1,8 @@
+logs/
+nbproject/
+public_html/.htaccess
+public_html/php_errorlog
+public_html/php.ini
+site_config.ini
+uploads/
+webstats/
