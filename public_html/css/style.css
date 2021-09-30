@@ -1,0 +1,321 @@
+/*
+page background: #E1E3E1 (grey)
+header/footer (dark) background: #343a40 (black)
+*/
+
+/** general **/
+html{
+	min-height: 100%;
+	position: relative;
+}
+body{
+	background-color: #E1E3E1;
+	margin-bottom: 60px; /* fixed footer height */
+}
+body > .container-fluid{
+	margin-top: 70px; /* leave room for header */
+}
+
+/** navbar **/
+.navbar .dropdown-on-hover .dropdown-content a.bg-dark:hover{
+	background-color: inherit !important;
+}
+.navbar button{
+	margin-left: 4px;
+	margin-right: 4px;
+}
+.navbar button.uploadImages{
+	margin-right: 8px;
+}
+.navbar .search-form{
+	padding: 0.25em 0.5em;
+}
+.navbar .search-form-input{
+	float: right;
+}
+.hidden{
+	visibility: hidden;
+}
+.popup-on-hover{
+	display: none;
+}
+
+/** footer **/
+.footer{
+	/*background-color: #f8f8f8;*/
+	bottom: 0;
+	color: white;
+	height: 60px; /* Set the fixed height of the footer here */
+	line-height: 60px; /* Vertically center the text there */
+	position: absolute;
+	width: 100%;
+}
+.footer a{
+	color: white;
+}
+.footer > .container{
+	max-width: 100%;
+}
+.footer > .container .left-justify{
+	display: inline-block;
+}
+.footer > .container .right-justify{
+	display: inline-block;
+	text-align: right;
+}
+.footer > .container #login{
+	margin-top: 10px;
+}
+
+/*** footer login modal ***/
+#loginModal{
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	display: none; /* Hidden by default */
+	height: 100%; /* Full height */
+	left: 0;
+	overflow: auto; /* Enable scroll if needed */
+	position: fixed; /* Stay in place */
+	top: 0;
+	width: 100%; /* Full width */
+	z-index: 1; /* Sit on top */
+}
+#loginModal .modal-box{
+	border: 1px solid #888;
+	border-radius: 5px;
+	margin: 15% auto; /* 15% from the top and centered */
+	width: 25em; /* Could be more or less, depending on screen size */
+}
+#loginModal .modal-content{
+	background-color: #fefefe;
+	border: none;
+	border-radius: 0;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	padding: 20px;
+}
+#loginModal .close-bar{
+	background-color: #eee;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	height: 28px;
+	width: 100%;
+}
+#loginModal .close{
+	background-color: #ddd;
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+	padding-left: 4px;
+	padding-right: 4px;
+	text-align: right;
+}
+#loginModal .close:hover,
+#loginModal .close:focus{
+	color: black;
+	cursor: pointer;
+	text-decoration: none;
+} 
+
+/** fancy images **/
+.fancy-image-border{
+	border: black 3px solid;
+	border-radius: 10px;
+	padding: 2px;
+}
+
+/** home page **/
+.home-image-box{
+	display: grid;
+	height: 100%;
+}
+.home-image{
+/*	margin: 5px;
+	max-height: 850px;
+	max-width: 1600px;*/
+	max-width: 100%;
+	max-height: 100vh;
+	margin: auto;
+}
+.home .description{
+	margin-top: 1em;
+}
+
+/** upload/pictures pages **/
+#formUploadFile{
+	margin-top: 6px;
+}
+.sorting-controls{
+	margin-bottom: 1rem;
+}
+.pic-pad{
+	float: left;
+	padding: 5px;
+}
+.pic-pad img{
+	height: 260px;
+}
+.pictures.row .pic-pad img{
+	height: 300px;
+}
+.pic-pad .pic-border{
+	align-items: center;
+	background-color: black;
+	border: 3px black solid;
+	border-radius: 7px;
+	color: white;
+	height: 100%;
+	justify-content: center;
+	overflow: hidden;
+	text-align: center;
+}
+.pic-pad > .pic-border hr{
+	border-color: white;
+	margin-top: 6px;
+	margin-bottom: 6px;
+}
+.pic-pad .pic-border p{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.pic-pad .pic-border .img-span{
+	display: flex;
+    justify-content: center;
+    /*height: 400px;  or other desired height */
+    overflow: hidden;
+}
+.pic-pad .pic-border .img-span img{
+	flex: none; /* keep aspect ratio */
+}
+.pic-pad .filename_date_added{
+	font-size: smaller;
+}
+.pic-pad .add-on-options label{
+	margin-bottom: 0;
+}
+.pic-pad .caption,
+.pic-pad .add-on-options,
+.pic-pad .action-buttons{
+	padding-left: 1em;
+	padding-right: 1em;
+}
+.pic-pad .caption_change{
+	font-size: smaller;
+	margin-left: 8px;
+}
+.pic-pad .caption_change_text{
+	display: none;
+}
+.pic-pad .caption_changed{
+	display: none;
+}
+
+/** picture sorting buttons **/
+div.row > div.sort-pics.col-xs-12{
+	text-align: center;
+	width: 100%;
+}
+div.row > div.sort-pics.col-sm-12 > a{
+	background-color: black;
+	border-color: black;
+	color: white;
+	display: inline-block;
+	margin: 2px;
+}
+
+/** video gallery **/
+div.videos.row div.vid-pad{
+	padding: 5px;
+}
+div.videos.row div.vid-pad div.vid-border{
+	align-items: center;
+	background-color: black;
+	border: 2px black solid;
+	border-radius: 7px;
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	overflow: hidden;
+	padding-top: 6px;
+	text-align: center;
+}
+div.videos.row div.vid-pad div.vid-border div.video{
+}
+div.videos.row div.vid-pad div.vid-border div.video video{
+	max-height: 350px;
+	max-width: 350px;
+}
+div.videos.row div.vid-pad div.vid-border div.caption{
+	color: yellow;
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+
+#config_page .select-by-textarea{
+	margin-right: 5px;
+}
+#config_page textarea{
+	padding: 2px;
+}
+
+/** THE FOLLOWING IS FROM / SHOULD BE IN core_style.css **/
+
+/* override frickin bootstrap, yee-fuckin-eesh */
+.btn:focus{
+	box-shadow: none !important;
+}
+a,
+a:hover{
+	/*color: yellow;*/
+	text-decoration: none !important;
+}
+
+/*** common functions ***/
+.full-height{
+	height: 100%;
+}
+.full-width{
+	width: 100%;
+}
+.left-justify{
+	float: left;
+}
+.right-justify{
+	float: right;
+}
+.text-center{
+	text-align: center;
+}
+.text-left{
+	text-align: left;
+}
+.text-right{
+	text-align: right;
+}
+.invisible{
+	visibility: hidden;
+}
+.clear{
+	clear: both;
+}
+.red-text, 
+.red-text a{
+	color: red;
+}
+.bg-dark {
+	/*this is from css/Buttons-1.6.1/mixins(which i'm not using in this project yet'), not from core_style.css*/
+    background-color: #343a40 !important;
+}
+.bg-dark.btn-primary,
+.bg-dark.btn-primary:focus,
+.bg-dark.btn-primary:not(:disabled):not(.disabled):active,
+.bg-dark.btn-primary:not(:disabled):not(.disabled):active:focus{
+	/*background-color: inherit;*/
+	border: 0;
+	box-shadow: none;
+}
+button:hover{
+	/* otherwise it disappears in the header/footer */
+	background: white;
+}

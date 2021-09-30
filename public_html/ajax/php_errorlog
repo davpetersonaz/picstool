@@ -1,0 +1,8 @@
+[18-May-2021 05:03:52 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Undefined class constant 'THUMBS_DIR' in /home/customer/www/littlemanharley.com/public_html/ajax/verifyImages.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/littlemanharley.com/public_html/ajax/verifyImages.php on line 7
+[20-May-2021 05:49:49 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to undefined method Pictures::getHomePics() in /home/customer/www/littlemanharley.com/public_html/ajax/verifyImages.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/littlemanharley.com/public_html/ajax/verifyImages.php on line 20

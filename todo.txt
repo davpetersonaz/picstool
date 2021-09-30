@@ -1,0 +1,18 @@
+Pictures.php - manipulate the image for homepage-display -- home page pics -- ratio: 4 x 3, specifically: 800 x 600
+
+config.php -- add ability to change colors of borders/background/font/etc on picture pages
+
+image_display.php --
+figure out a better way to display full-image ... maybe iframes? (nice border, still see background if image is narrow/wide)
+https://stackoverflow.com/questions/18545077/image-fullscreen-on-click/50430187
+use <img data-enlargeable> to have the image go fullscreen when clicked.
+
+header.php --  move JS initializations to the end of the document so the pages load faster (not sure if they work if at the end? got junit errors til i moved them back here...)
+
+php.ini -- allow larger sizes because videos are so much bigger 
+
+pictures.js --
+theres gotta be a way to use javascript to check each file and removing existing ones from the form??
+not sure how that would be executed
+ajax call, followed by form submission (with appropriate retractions)
+and don't forget to move the warnings of files that were not uploaded so they still display
