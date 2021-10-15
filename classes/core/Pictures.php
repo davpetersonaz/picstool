@@ -78,7 +78,7 @@ class Pictures{
 //		logDebug('path_info: '.var_export($pathinfo, true));
 		
 		$exif = exif_read_data($destination);
-		$dateTimeOriginal = (empty($exif) ? filemtime($destination) : $exif['DateTimeOriginal']);
+		$dateTimeOriginal = (!isset($exif['DateTimeOriginal']) ? filemtime($destination) : $exif['DateTimeOriginal']);
 		
 		$imagick = new Imagick($destination);
 		$imagick->setimageformat('jpg');//or, perhaps just 'setFormat' since the filename was given to the constructor?
