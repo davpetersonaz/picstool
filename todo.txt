@@ -1,3 +1,6 @@
+1. make a "randomize" selection to supplement chronological/alphabetical/uploadtime radio buttons.
+2. add a better upload tool, something with a progress bar.
+
 Pictures.php - manipulate the image for homepage-display -- home page pics -- ratio: 4 x 3, specifically: 800 x 600
 
 config.php -- add ability to change colors of borders/background/font/etc on picture pages
