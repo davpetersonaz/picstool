@@ -36,9 +36,11 @@ logDebug('number of pics: '.count($pics));
 
 	<div class='pictures row'>
 <?php foreach($pics as $image){ ?>
+	<?php if(!$image['featured']){ ?>
 		<div class='pic-pad col-xs-12 col-sm-6 col-md-4 col-lg-3'>
 			<?php include 'includes/image_display.php'; ?>
 		</div>
+	<?php } ?>
 <?php } ?>
 	</div>
 </div>
